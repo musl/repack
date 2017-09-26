@@ -24,5 +24,5 @@ gem install foreman
     make
     ```
     
-- Navigate to https://127.0.0.1:80820/
+- Navigate to https://127.0.0.1:8082/
 
