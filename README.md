@@ -2,12 +2,27 @@
 A boilerplate repo for apps written with ractivejs and go. Build
 pipeline by webpack.
 
-## To Use
+## Dependencies
+These commands are for OS X. If you're on another platform I assume you
+know what to do here.
+
 ```shell
-cd /tmp
-git clone https://github.com/musl/repack
-cd repack
+brew install nginx npm
+npm install -g webpack
 gem install foreman
-npm install
-make
 ```
+
+## To Use 
+
+- Run:
+
+    ```shell
+    cd /tmp
+    git clone https://github.com/musl/repack
+    cd repack
+    npm install
+    make
+    ```
+    
+- Navigate to https://127.0.0.1:80820/
+
