@@ -1,3 +1,3 @@
 api/api
-static/**
+build/**
 node_modules/**

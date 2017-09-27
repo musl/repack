@@ -10,7 +10,7 @@ module.exports = {
   },
   output: {
     filename: 'bundle.js',
-    path: __dirname + '/static',
+    path: __dirname + '/build',
   },
   module: {
     loaders: [
@@ -24,8 +24,8 @@ module.exports = {
           ],
         },
       },
-      { test: /\.css/, loader: 'style-loader!css-loader!postcss-loader' },
-      { test: /\.html/, loader: 'ractive-loader' }
+      { test: /\.css/, loader: 'style-loader!css-loader' },
+      { test: /\.html/, loader: 'ractive-loader' },
     ]
   },
   plugins: [
@@ -34,17 +34,10 @@ module.exports = {
         NODE_ENV: JSON.stringify('production')
       }
     }),
-    new webpack.LoaderOptionsPlugin({
-      postcss: [
-        autoprefixer({
-          browsers: ['last 2 versions']
-        }),
-      ],
-    }),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new BabelMinifyPlugin(),
     new CopyWebpackPlugin([
-      { from: __dirname + '/src/index.html' }
+      { from: __dirname + '/static' },
     ]),
   ],
 };
